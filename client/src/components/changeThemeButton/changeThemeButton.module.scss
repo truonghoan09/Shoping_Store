@@ -1,0 +1,36 @@
+.containerButton {
+    position: relative;
+    display: flex;
+    margin-right: 1rem;
+    .arrowIcon {
+        transform: scale(0.7);
+    }
+}
+.contentDropdown {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 2.7rem;
+    right: 1rem;
+    border: 1px solid rgb(170, 170, 170);
+    border-radius: 0.3rem;
+    width: 100px;
+    background-color: white;
+    .menuItem {
+        cursor: pointer;
+        color: black;
+        height: 1.7rem;
+        padding-left: 0.7rem;
+        display: flex;
+        line-height: 1.7rem;
+        align-items: center;
+        .text {
+            margin-left: 0.4rem;
+        }
+        &:hover {
+            background-color: rgb(244, 241, 241);
+            color: rgb(74, 74, 237);
+            border-radius: 0.3rem;
+        }
+    }
+}

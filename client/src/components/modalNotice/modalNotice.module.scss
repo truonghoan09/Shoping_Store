@@ -1,0 +1,90 @@
+.containerNoticeRegisterModal {
+    &.dark{
+        background-color: rgba(226, 218, 218, 0.236);
+        .modalBlock{
+            background-color: black;
+            border: 1px solid white;
+            .header{
+                .closeIcon:hover{
+                    color: rgb(210, 207, 203);
+                }
+            }
+        }
+    }
+  top:0;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(198, 198, 198, 0.545);
+  .modalBlock {
+      min-height: 13rem;
+      width: 40rem;
+      background-color: rgb(255, 255, 255);
+      border-radius: 0.5rem;
+      .header {
+          display: flex;
+          width: 100%;
+          font-size: larger;
+          font-weight: 600;
+          line-height: 3rem;
+          padding-left: 1rem;
+          text-transform: uppercase;
+          min-height: 3rem;
+          border-bottom: 0.2rem solid rgb(200, 200, 200);
+          user-select: none;
+          .closeIcon{
+              margin-left: auto;
+              padding-right: 1.1rem;
+              scale: 1.5;
+              color: rgb(155, 155, 155);
+              text-decoration: none;
+              user-select: none;
+          }
+
+          .closeIcon:hover {
+              color: black;
+              cursor: pointer;
+          }
+
+          .closeIcon:active {
+              color: rgb(124, 123, 123);
+          }
+
+      }
+      .body{
+          padding: 1rem;
+          display: flex;
+          flex-direction: column;
+          font-size: 1.2rem;
+          height: 9.5rem;
+          .closeBut{
+              border: 1px solid #0077bf;
+              height: 2rem;
+              width: 10rem;
+              line-height: 2rem;
+              text-align: center;
+              font-size: 1.2rem;
+              margin-left: auto;
+              margin-top: auto;
+              padding-bottom: 2rem;
+              background-color: #0077bf;
+              color: white;
+              text-decoration: none;
+              user-select: none;
+              border-radius: 0.2rem;
+          }
+          .closeBut:hover {
+              cursor: pointer;
+          }
+
+          .closeBut:active {
+              background-color: #1988cd;
+          }
+      }
+
+  }
+}

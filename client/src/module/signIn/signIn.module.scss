@@ -1,0 +1,306 @@
+$gradientColorCustom : linear-gradient(to right, #4172e4, #68afd8, #39d0e7, #49dcba);
+
+.containerPage {
+    &.dark{
+        background-color: black;
+        color: white;
+        .container{
+            .contentLeft{
+                .containerForm{
+                    .didFloatingLabelContent{
+                        .didFloatingLabel{
+                            background-color: black;
+                            color: white;
+                        }
+                        .didFloatingInput{
+                            background-color: black;
+                            border-color: white;
+                            color: white;
+                        }
+                        .labelTop{
+                            background-color: black;
+                            color: white;
+                        }                        
+                    }
+                    .container_password_block{
+                        .didFloatingLabelContentPassword{
+                            border-color: white;
+                            .didFloatingLabelPassword{
+                                background-color: black;
+                                color: white;
+                            }
+                            .didFloatingInputPassword{
+                                background-color: black;
+                                color: white;
+                            }
+                            .labelTop{
+                                background-color: black;
+                                color: white;
+                            }
+                        }
+                        
+                    }
+                }
+                .containerContentBelow{
+                    .blockSignUp{
+                        .content{
+                            color: white;
+                        }
+                    }
+                    .blockSignIn{
+                        .logInButton{
+                            background-color: #1673bf;
+                        }
+                        .logInButton:hover{
+                            background-color: rgb(22, 101, 150);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    width: 100%;
+    min-height: 92%;
+    display: flex;
+    justify-content: center;
+    .container {
+        margin-top: 7rem;
+        width: 65vw;
+        height: fit-content ;
+        border: 1px solid  rgb(207, 204, 204);
+        border-radius: 7px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        .contentLeft {
+            grid-column: 1;
+            padding: 1.5rem;
+            padding-top: 2rem;
+            .title{
+                font-size: 1.5rem;
+                font-weight: 300;
+            }
+            .containerForm {
+                padding: 0 1rem;
+                padding-top: 1.4rem;
+                .didFloatingLabelContent { 
+                    margin-top: 1rem;
+                    position: relative; 
+                    margin-bottom: 20px; 
+                    .didFloatingLabel {
+                        color: #1e4c82; 
+                        font-size: 15px;
+                        font-weight: normal;
+                        position: absolute;
+                        pointer-events: none;
+                        margin: auto;
+                        left: 15px;
+                        top: 12px;
+                        padding: 0 5px;
+                        background: #fff;
+                        transition: 0.2s ease all; 
+                        -moz-transition: 0.2s ease all; 
+                        -webkit-transition: 0.2s ease all;
+                        user-select: none;
+                    }
+                    .didFloatingInput {
+                        font-size: 15px;
+                        display: block;
+                        width: 100%;
+                        height: 2.5rem;
+                        line-height: 2.5rem;
+                        padding: 0 20px;
+                        background: #fff;
+                        color: #323840;
+                        border: 1px solid #478ad6;
+                        border-radius: 4px;
+                        box-sizing: border-box;
+                        &:focus{
+                            outline: none;
+                            ~ .didFloatingLabel {
+                                top: -8px;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                    .labelTop {
+                        color: #1e4c82; 
+                        font-size: 13px;
+                        font-weight: normal;
+                        position: absolute;
+                        pointer-events: none;
+                        left: 15px;
+                        top: 11px;
+                        padding: 0 5px;
+                        background: #fff;
+                        transition: 0.2s ease all; 
+                        -moz-transition: 0.2s ease all; 
+                        -webkit-transition: 0.2s ease all;
+                        top: -8px;
+                        font-size: 13px;
+                        user-select: none;
+                    }
+                }
+                .container_password_block{
+                    margin-top: 1rem;
+                    margin-bottom: 20px; 
+                    .didFloatingLabelContentPassword { 
+                        position: relative; 
+                        border: 1px solid #478ad6;
+                        border-radius: 4px;
+                        display: flex;
+                        .didFloatingLabelPassword {
+                        color: #1e4c82; 
+                        font-size: 15px;
+                        font-weight: normal;
+                        position: absolute;
+                        pointer-events: none;
+                        left: 15px;
+                        top: 12px;
+                        padding: 0 5px;
+                        background: #fff;
+                        transition: 0.2s ease all; 
+                        -moz-transition: 0.2s ease all; 
+                        -webkit-transition: 0.2s ease all;
+                        user-select: none;
+                        }
+                        .didFloatingInputPassword {
+                            font-size: 15px;
+                            display: block;
+                            width: 90%;
+                            height: 2.5rem;
+                            padding: 0 20px;
+                            background: #fff;
+                            border-radius: 4px;
+                            color: #323840;
+                            border: none;
+                            box-sizing: border-box;
+                            &:focus{
+                                outline: none;
+                                ~ .didFloatingLabelPassword {
+                                    top: -8px;
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                        .labelTop {
+                            color: #1e4c82; 
+                            font-size: 13px;
+                            font-weight: normal;
+                            position: absolute;
+                            pointer-events: none;
+                            left: 15px;
+                            top: 12px;
+                            padding: 0 5px;
+                            background: #fff;
+                            transition: 0.2s ease all; 
+                            -moz-transition: 0.2s ease all; 
+                            -webkit-transition: 0.2s ease all;
+                            top: -8px;
+                            font-size: 13px;
+                            user-select: none;
+                        }
+                        .eyeIcon {
+                            width: 10%;
+                            display: flex;
+                            margin: auto;
+                            justify-content: center;
+                        }
+                    }
+                }
+                .noticeDiv {
+                    padding-left: 1rem;
+                    margin-top: 0.2rem;
+                    color: red;
+                    font-size: 12px;
+                }
+            }
+            .containerContentBelow {
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                .blockSignIn {
+                    width: 20rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .logInButton {
+                        height: 2rem;
+                        width: 6rem;
+                        line-height: 2rem;
+                        border: none;
+                        text-align: center;
+                        border-radius: 4px;
+                        background-color: rgb(32, 170, 172);
+                        color: white;
+                        cursor: pointer;
+                        user-select: none;
+                    }
+                    .logInButton:hover{
+                        background-color: rgba(35, 136, 138, 0.816);
+                    }
+                    .logInButton:active{
+                        background-color: rgb(113, 211, 213);
+                    }
+
+                    .forgotPassword {
+                        user-select: none;
+                        color: #6c6c6c;
+                        padding-top: 10px;
+                        font-size: 0.8rem;
+                        font-style: italic;
+                        cursor: pointer;
+                    }
+                }
+                .blockSignUp {
+                    padding-top: 1.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 0.5rem;
+                    .content{
+                        color: black;
+                    }
+                    .signUpButton{
+                        user-select: none;
+                        display: block;
+                        border-radius: 4px;
+                        height: 2rem;
+                        width: 5rem;
+                        text-align: center;
+                        line-height: 2rem;
+                        border: solid 1px rgb(245, 75, 75);
+                    }
+                    .signUpButton:hover{
+                        background-color: rgb(244, 105, 105);
+                        color: white;
+                    }
+                    .signUpButton:active{
+                        background-color: rgb(249, 126, 126);
+                        color: white;
+                    }
+                }
+            }
+        }
+        .contentRight {
+            grid-column: 2;
+            background-image: $gradientColorCustom;
+            display: flex;
+            align-items: center;
+            border-radius: 0px 7px 7px 0px;
+            .textArea {
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+                color: white;
+                .title {
+                    font-size: large;
+                }
+                .content {
+                    font-size: 0.8rem
+                }
+            }
+        }
+    }
+}

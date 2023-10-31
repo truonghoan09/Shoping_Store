@@ -1,0 +1,14 @@
+.arrow {
+    color: rgb(255, 81, 81);
+    position: fixed;
+    scale: 3;
+    rotate: 180deg;
+    bottom: 3rem;
+    right: 4rem;
+}
+
+.arrow:hover {
+    cursor: pointer;
+    scale: 3.2;
+    color: rgb(255, 0, 0);
+}

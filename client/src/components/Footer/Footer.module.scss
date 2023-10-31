@@ -1,0 +1,98 @@
+
+.icon {
+    height: 1.7rem;
+    width: 3.5rem;
+    background-color: white;
+    border-radius: 0.1rem;
+    box-shadow: -1px 1px 2px 0 rgba(0, 0, 0, 0.2), 1px 0px 2px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+    font-weight: 600;   
+}
+
+
+
+.container_grid{
+    &.dark{
+        background-color: black;
+        color: white;
+        .payment {
+            background-color: black;
+        }
+        .express {
+            background-color: black;
+        }
+        &.infoDev{
+            background-color: black;
+        }
+    }
+    display: grid;
+    height: auto;
+    grid-template-columns: 2fr 1fr 1fr;
+    align-content: center;
+    padding: 2rem 10rem;
+    .info {
+        font-size: 15px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        .emailBlock{
+            display: flex;
+            .email{
+                margin-left: 0.3rem;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .payment { 
+    padding-left: 1rem;
+    background-color: rgb(255, 255, 255);
+    ul, ol {
+        padding-left: 0;
+        margin-left: 0;
+    }
+    .paymentlist{
+        margin-top: 0.3rem;
+        display: grid;
+        width: 15rem;
+        list-style-type: none;
+        row-gap: 0.3rem;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    }
+
+    .express{
+        padding-left: 1rem;
+        background-color: rgb(255, 255, 255);
+        ul, ol {
+            padding-left: 0;
+            margin-left: 0;
+        }
+        .expresslist{
+            margin-top: 0.3rem;
+            display: grid;
+            width: 15rem;
+            list-style-type: none;
+            row-gap: 0.3rem;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}
+
+.infoDev {
+    &.dark{
+        background-color: black;
+        color: white;
+    }
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
