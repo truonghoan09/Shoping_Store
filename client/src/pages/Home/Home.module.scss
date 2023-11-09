@@ -1,5 +1,15 @@
+@keyframes scrollKeyFrame {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-583.55px);
+    }
+}
 
 .background{
+    user-select: none;
+    width: 100vw;
     &.dark {
         background-color: black;
         color: white;
@@ -8,97 +18,242 @@
         background-color: white;
         color: black;
     }
-  .bigTitle{
-    font-family:'Times New Roman', Times, serif;
-    width: 100vw;
-    text-align: center;  
-    font-size: 2rem;
-    padding-top: 2rem;
-    font-weight: 800;   
-    display: block;
-  }
-  .containerGrid1{
-      display: grid;
-      margin: 0rem 10rem;
-      padding-top: 2rem;
-      grid-template-rows: auto;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      .content1{
-          font-family:'Times New Roman', Times, serif;
-          align-self: center;
-          .title {
-              padding-bottom: 0.5rem;
-              text-align: center;
-              font-size: larger;
-              font-weight: 500;
-          }
-          padding: 0 3rem;
-          grid-column: 1;
-      }
-      .image1{
-          grid-column: 2;
-          max-height: 25rem;
-          width: 100%;
-          object-fit: cover;
-      }
-      
-  }
-  .containerGrid2{
-      display: grid;
-      margin: 0rem 10rem;
-      padding-top: 2rem;
-      grid-template-rows: auto;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      .content2{
-          align-self: center;
-          font-family:'Times New Roman', Times, serif;
-          .title {
-              padding-bottom: 0.5rem;
-              text-align: center;
-              font-size: larger;
-              font-weight: 500;
-          }
-          padding: 0 3rem;
-          grid-column: 2;
-      }
-      .image2{
-          padding: 0 1rem;
-          grid-row: 1;
-          grid-column: 1;
-          max-height: 25rem;
-          width: 100%;
-          object-fit: cover;
-      }
-      
-  }
-  .containerGrid3{
-      display: grid;
-      margin: 0rem 10rem;
-      padding-top: 2rem;
-      grid-template-rows: auto;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      .content3{
-          align-self: center;
-          font-family:'Times New Roman', Times, serif;
-          .title {
-              padding-bottom: 0.5rem;
-              text-align: center;
-              font-size: larger;
-              font-weight: 500;
-          }
-          padding: 0 3rem;
-          grid-column: 1;
-      }
-      .image3{
-          grid-column: 2;
-          grid-row: 1;
-          max-height: 25rem;
-          width: 100%;
-          object-fit: cover;
-      }
-      
-  }
+    .countContainer{
+        position: relative;
+        height: 500px;
+        .background1 {
+            position: absolute;
+            height: 500px;
+            width: 100%;
+            object-fit: cover;
+        }
+        .backgroundFillter{
+            height: 500px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.264);
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .contentCountContainer{
+                display: flex;
+                height: 200px;
+                width: 100%;
+                padding: 0 3.2rem;
+                align-items: center;
+                .leftSide {
+                    color: white;
+                    width: 100cm;
+                    .getNotifiedBut {
+                        height: 50px;
+                        margin-top: 40px;
+                        padding: 0 1rem;
+                        border: none;
+                        background-color: rgb(67, 67, 67);
+                        color: white;
+                        &.getNotifiedBut:hover {
+                            background-color: rgb(61, 61, 61);;
+                        }
+                        cursor: pointer;
+                    }
+                }
+                .middleSpace{
+                    width: 100%;
+                }
+                .rightSide {
+                    background-color: rgba(255, 255, 255, 0.575);
+                    display: flex;
+                    width: max-content;
+                    align-items: center;
+                    height: 70px;
+                    .itemClock {
+                        width: 150px;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    .borderClock {
+                        height: 50px;
+                        border: solid rgb(152, 152, 152) 1px;
+                        margin: 0 1px;
+                    }
+                    .labelDiv{
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                    }
+                    .timeNumber{
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    .contaiterBestsellers{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .titleBestsellers {
+            width: fit-content;
+            font-size: 0.6cm;
+            margin-top: 2.5cm;            
+            margin-bottom: 1.2cm;            
+        }
+        .containerProductBestSellers{
+            display: flex;
+            gap: 20px;
+        }
+    }
+    .containerMadeForYou {
+        display: flex;
+        width: 100vw;
+        height: 12cm;
+        margin-top: 3cm;
+        .leftSide{
+            width: 50%;
+            background-color: rgb(234, 234, 234);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .title{
+                font-size: 1.5cm;
+            }
+            .content{
+                color: rgb(115, 114, 114);
+                width: 50%;
+                text-align: center;
+                font-size: 17px;
+            }
+            .linkPage {
+                padding-top: 1rem;
+                text-decoration: underline;
+                color: rgb(75, 75, 75);
+            }
+        }
+        .rightSide{
+            width: 50%;
+            .image {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+    .containerScroll{
+        height: 6cm;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        gap: 100px;
+        overflow-x: hidden;
+        animation: scrollKeyFrame 10s linear infinite;  
+        .item{
+            font-size: 1.2cm;
+            width: max-content;
+        }
+    }
+    .containerDiscover{
+        padding: 0 2cm;
+        display: flex;
+        .leftSide{
+            width: 60%;
+            .image{
+                object-fit: cover;
+                height: 90%;
+            }
+        }
+        .rightSide{
+            padding-left: 1.5cm;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .title{
+                font-size: 1cm;
+                padding: 10px 0;
+                color: rgb(102, 102, 102);
+            }
+            .price {
+                font-size: 0.6cm;
+                padding: 10px 0;
+                color: rgb(147, 147, 147);
+            }
+            .inStock {
+                width: 100%;
+                text-align: center;
+                border: solid 2px rgb(224, 224, 224);
+                border-left: none;
+                border-right: none;
+                padding: 15px 0;
+                color: rgb(149, 149, 149);
+            }
+            .describe {
+                font-style: italic;
+                color: rgb(149, 149, 149);
+                padding: 10px 0;
+            }
+            .smallMenu {
+                display: flex;
+                gap: 10px;
+                width: 100%;
+                color: rgb(149, 149, 149);
+                border-bottom: solid 1px rgb(224, 224, 224);
+                .menuItem {
+                    cursor: pointer;
+                }
+                .menuChoosed {
+                    padding-bottom: 10px;
+                    color: rgb(106, 106, 106);
+                    border-bottom: solid 1px rgb(0, 0, 0);
+                }
+            }
+
+            .contentFreshAndFloral, .contentWoody, .contentSmooth{
+                &.hide {
+                    display: none;
+                }
+                p{
+                    padding-top: 20px;
+                    color: rgb(136, 136, 136);
+                }
+                padding-bottom: 30px;
+            }
+
+            .addToCardBut{
+                height: 1cm;
+                width: 9cm;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid rgb(143, 142, 142);
+                background-color: rgb(143, 142, 142);
+                color: white;
+                margin-bottom: 30px;
+                cursor: pointer;
+            }
+            .addToCardBut:hover{
+                background-color: rgb(112, 112, 112);
+            }
+            .line {
+                width: 100%;
+                border-top: solid 1px rgb(224, 224, 224);
+            }
+
+            .linkPage2{
+                padding-top: 20px;
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                color: gray;
+                div{
+                    font-size: 0.4cm;
+                }
+            }
+        }
+        
+    }
 }

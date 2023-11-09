@@ -5,6 +5,7 @@ import setThemeReducer from './reducers/setThemeReducer';
 import addUserReducer from './reducers/addAUserReducer';
 import checkSignInReducer from './reducers/checkSignInReducer';
 import uploadFileReducer from './reducers/uploadFileReducer';
+import toggleQuickshopReducer from './reducers/toggleQuickshopReducer';
 
 const rootReducer = combineReducers({
     setThemeReducer,
@@ -12,6 +13,7 @@ const rootReducer = combineReducers({
     signInReducer,
     checkSignInReducer,
     uploadFileReducer,
+    toggleQuickshopReducer,
 });
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
