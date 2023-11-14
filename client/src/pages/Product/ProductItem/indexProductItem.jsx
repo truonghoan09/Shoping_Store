@@ -29,8 +29,8 @@ const ProductItem = (props) => {
                     {except.image.map((_,i) => {
                         return(
                             <>
-                                <img src={except.image[i]} 
-                                    className={(chooseImg === i+1) && styles.imgChoose}
+                                <img key={i} src={except.image[i]} 
+                                    className={(chooseImg === i+1) ? styles.imgChoose: null}
                                     onClick={() => setChooseImg(i+1)}
                                     />
                             </>
@@ -50,7 +50,7 @@ const ProductItem = (props) => {
                             <div className={styles.containerOptionMenuItem}>
                                 {except.optionItems.map((_,i)=> {
                                     return(
-                                        <div className={`${styles.menuOptionItem} ${(chooseOption === i+1) && styles.optionChoose}`}
+                                        <div key={i} className={`${styles.menuOptionItem} ${(chooseOption === i+1) && styles.optionChoose}`}
                                         onClick={() => {handleClickChooseOption(i+1)}}>
                                             {except.optionItems[i]}
                                         </div>

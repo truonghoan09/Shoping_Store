@@ -4,7 +4,7 @@ import { IMAGES } from '../../assets';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import AProduct from '../../components/AProductComponent/indexAProductComp';
-import { FloralProduct, FreshProduct, WoodyProduct } from '../Product/productManage';
+import { BestSellers, FloralProduct, FreshProduct, WoodyProduct } from '../Product/productManage';
 import { Link } from "react-router-dom";
 import ScrollToTop from '../../components/ScrollToTopButton/scrollToTopButton';
 import QuickShop from '../../components/QuickShop/quickShopIndex';
@@ -116,21 +116,15 @@ const HomePage = () => {
                 <div className={styles.contaiterBestsellers}>
                     <div className={styles.titleBestsellers}>SHOP BESTSELLERS</div>
                     <div className={styles.containerProductBestSellers}>
-                        <AProduct 
-                            sizeBox = 'bigSize'
-                            data={WoodyProduct}
-                            except={WoodyProduct.type[0]}
-                            />
-                        <AProduct 
-                            sizeBox = 'bigSize'
-                            data={FreshProduct}
-                            except={FreshProduct.type[0]}
-                            />
-                        <AProduct 
-                            sizeBox = 'bigSize'
-                            data={FloralProduct}
-                            except={FloralProduct.type[0]}
-                            />
+                        {BestSellers.map((v,i) => {
+                            return (
+                                <AProduct 
+                                    key={i}
+                                    sizeBox = 'bigSize'
+                                    data={v}
+                                    except={v.type[0]}
+                                    />)
+                        })}
                     </div>
                 </div>
 

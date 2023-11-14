@@ -1,8 +1,19 @@
 .container{
+    width: 100vw;
     &.dark{
         background-color: black;
         color: white;
     }
-    min-height: 60%;
     border-bottom: 1px solid rgb(182, 182, 182);
+    .containerProducts {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 30px;
+        padding: 2cm 0;
+        .productItem{
+            display: flex;
+            justify-content: center;
+        }
+    }
 }

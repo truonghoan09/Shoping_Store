@@ -56,9 +56,9 @@ const NavBar = () => {
       <nav className={`${styles.header} ${styles[theme_now]}`}>
           <div className={styles.container_full}>
               <div className={styles.option_left}>
-                  <Link to="/">HOME</Link>
+                  <Link className={window.location.pathname === '/'  && styles.choose} to="/">HOME</Link>
                   <div>|</div>
-                  <Link to="/product">PRODUCT</Link>
+                  <Link className={window.location.pathname.includes('product')  && styles.choose} to="/product">PRODUCT</Link>
               </div>
               <h1 className={styles.titleName}>ATLANTIC</h1>
               {!isSignIn ? 

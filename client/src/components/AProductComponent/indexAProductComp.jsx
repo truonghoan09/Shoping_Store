@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './AProductComponent.module.scss'
 import { useDispatch } from 'react-redux';
 import { toggleQuickshop } from '../../redux/actions';
@@ -7,6 +7,11 @@ const AProduct = (props) => {
     const [statusImage, setStatusImage] = useState('inactive')
     const data = props.data
     const except = props.except
+
+    useEffect(()=>{
+        console.log('data: ',data);
+        console.log('except: ',except);
+    },[data, except])
 
     const dispatch = useDispatch();
 
@@ -23,7 +28,7 @@ const AProduct = (props) => {
                     className={styles.containerImage} 
                     onMouseOver={() => {setStatusImage('active')}}
                     onMouseOut={() => {setStatusImage('inactive')}}>
-                    <img className={styles.image} src={except.image[1]}/>
+                    <img className={styles.image} src={except.image[0]}/>
                     <div className={`${styles.menu} ${styles[statusImage]}`}>
                         <div 
                             className={styles.quickShopBut}
