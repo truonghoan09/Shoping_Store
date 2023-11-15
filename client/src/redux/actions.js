@@ -1,5 +1,5 @@
 
-import { SET_THEME, TOGGLE_QUICKSHOP } from "./type.js"
+import { ADD_PRODUCT_TO_CART, REMOVE_PRODUCT_FROM_CART, SET_THEME, TOGGLE_CART, TOGGLE_QUICKSHOP } from "./type.js"
 import axios from "axios"
 import {ADD_USER_REQUEST, ADD_USER_SUCCESS, ADD_USER_ERROR, SIGN_IN_REQUEST, SIGN_IN_SUCCESS, SIGN_IN_ERROR, SEND_REQUEST_CHECK_TOKEN, RESPONSE_CHECK_TOKEN, ERROR_CHECK_TOKEN, UPLOAD_FILE_SUCCESS, UPLOAD_FILE_REQUEST, UPLOAD_FILE_FAILURE} from "./type.js"
 
@@ -70,5 +70,26 @@ export const toggleQuickshop = (data) => {
     return ({
         type: TOGGLE_QUICKSHOP,
         payload: data,
+    })
+}
+
+export const toggleCart = (boolean) => {
+    return({
+        type: TOGGLE_CART,
+        payload: boolean,
+    })
+}
+
+export const addProductToCart = (product) => {
+    return({
+        type: ADD_PRODUCT_TO_CART,
+        payload: product,
+    })
+}
+
+export const removeProductFromCart = (i) => {
+    return({
+        type: REMOVE_PRODUCT_FROM_CART,
+        payload: i,
     })
 }

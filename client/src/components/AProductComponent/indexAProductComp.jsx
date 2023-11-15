@@ -1,17 +1,13 @@
 import { useEffect, useState } from 'react';
 import styles from './AProductComponent.module.scss'
 import { useDispatch } from 'react-redux';
-import { toggleQuickshop } from '../../redux/actions';
+import { addProductToCart, toggleCart, toggleQuickshop } from '../../redux/actions';
 
 const AProduct = (props) => {
     const [statusImage, setStatusImage] = useState('inactive')
+    const [loadingBtn, setLoadingBtn] = useState(false);
     const data = props.data
     const except = props.except
-
-    useEffect(()=>{
-        console.log('data: ',data);
-        console.log('except: ',except);
-    },[data, except])
 
     const dispatch = useDispatch();
 
@@ -21,6 +17,15 @@ const AProduct = (props) => {
         dispatch(toggleQuickshop({data: {data, except}, showQuickshop: true}));
     }
 
+
+    const handleClickAddToCart = (data, except, numbExcept) => {
+        dispatch(addProductToCart({data: data, except: except, numbExcept: numbExcept}))
+        setLoadingBtn(true);
+        dispatch(toggleCart(true));
+        setTimeout(() => {
+            setLoadingBtn(false);
+        }, 400);
+    }
     return(
         <>
             <div className={`${styles.container} ${styles[props.sizeBox]}`}>
@@ -36,14 +41,16 @@ const AProduct = (props) => {
                             QUICKSHOP
                         </div>
                         <span className={styles.centerSpace}/>
-                        <div className={styles.addToCardBut}>
-                            ADD TO CARD
+                        <div className={styles.addToCardBut}
+                            onClick={() => {handleClickAddToCart(data, except, 0)}}
+                        >
+                            {!loadingBtn ? 'ADD TO CARD' : <div className={styles.circle}/>}
                         </div>
                     </div>
                 </div>
                 <div className={styles.containerName}>
                     <div className={styles.brand}>{data.brand}</div>
-                    <div className={styles.name}>{except.name}</div>
+                    <div className={styles.name}>{except.name[0]}</div>
                     <div className={styles.price}>{data.price}</div>
                 </div>
             </div>

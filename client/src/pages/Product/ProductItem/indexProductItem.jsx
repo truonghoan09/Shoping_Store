@@ -1,10 +1,14 @@
 import { useState } from 'react';
 import styles from './productItem.module.scss'
 import { array } from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { addProductToCart, toggleCart } from '../../../redux/actions';
 
 
 
 const ProductItem = (props) => {
+
+    const dispatch = useDispatch();
 
     const data = props.data.data;
     const except = props.data.except;
@@ -14,6 +18,7 @@ const ProductItem = (props) => {
     const [chooseImg, setChooseImg] = useState(1);
     
     const [chooseOption, setChooseOption] = useState(1);
+    const [loadingBtn, setLoadingBtn] = useState(false);
 
 
     const handleClickChooseOption =  (numb) => {
@@ -21,6 +26,15 @@ const ProductItem = (props) => {
         setChooseOption(numb);
     }
     
+    const handleClickAddToCart = (data, except, numbExcept) => {
+        dispatch(addProductToCart({data: data, except: except, numbExcept: numbExcept-1}))
+        setLoadingBtn(true);
+        dispatch(toggleCart(true));
+        setTimeout(() => {
+            setLoadingBtn(false);
+        }, 400);
+    }
+
     return(
         <>
             <div className={styles.container}>
@@ -42,7 +56,7 @@ const ProductItem = (props) => {
                     </div>
                 </div>
                 <div className={styles.containerText}>
-                    <div className={styles.title}>{except.name}</div>
+                    <div className={styles.title}>{except.name[0]}</div>
                     <div className={styles.price}>{except.price[chooseOption-1]}</div>
                     {data.optionName !== '' && 
                         <div className={styles.containerMenuOption}>
@@ -58,7 +72,7 @@ const ProductItem = (props) => {
                                 })}
                             </div>
                         </div>}
-                    <div className={styles.addToCardBut}>
+                    <div className={styles.addToCardBut} onClick={() => handleClickAddToCart(data, except, chooseOption)}>
                         ADD TO CARD
                     </div>
                     <div className={styles.textContent}>

@@ -21,7 +21,7 @@ export const Discover1 = {
             <p style={{paddingTop: '20px', color: 'rgb(149, 149, 149)'}}>This is a demo store. You can purchase products like this from <a href={'https://an-other.com/'}>A.N. OTHER.</a></p>
         </>,
     type: [{
-        name:'Discover',
+        name:['Discover'],
         image: [IMAGES.Discover1_1, IMAGES.Discover1_2, IMAGES.Discover1_3, IMAGES.Discover1_4],
         price: ['$15.00'],
         optionItems: [],
@@ -49,7 +49,7 @@ export const Discover2 = {
             <p style={{paddingTop: '20px', color: 'rgb(149, 149, 149)'}}>This is a demo store. You can purchase products like this from <a href={'https://an-other.com/'}>A.N. OTHER.</a></p>
         </>,
     type: [{
-        name:'Discover',
+        name:['Discover'],
         image: [IMAGES.Discover2_1, ],
         price: ['$15.00'],
         optionItems: [],
@@ -77,12 +77,12 @@ export const Discover3 = {
             <p style={{paddingTop: '20px', color: 'rgb(149, 149, 149)'}}>This is a demo store. You can purchase products like this from <a href={'https://an-other.com/'}>A.N. OTHER.</a></p>
         </>,
     type: [{
-        name:'Discover',
+        name:['Discover'],
         image: [IMAGES.Discover3_1, ],
         price: ['$15.00'],
         optionItems: [],
     }
-    ],
+],
 }
 
 export const Discover4 = {
@@ -105,7 +105,7 @@ export const Discover4 = {
             <p style={{paddingTop: '20px', color: 'rgb(149, 149, 149)'}}>This is a demo store. You can purchase products like this from <a href={'https://an-other.com/'}>A.N. OTHER.</a></p>
         </>,
     type: [{
-        name:'Discover',
+        name:['Discover'],
         image: [IMAGES.Discover4_1, ],
         price: ['$15.00'],
         optionItems: [],
@@ -133,7 +133,7 @@ export const Discover5 = {
             <p style={{paddingTop: '20px', color: 'rgb(149, 149, 149)'}}>This is a demo store. You can purchase products like this from <a href={'https://an-other.com/'}>A.N. OTHER.</a></p>
         </>,
     type: [{
-        name:'Discover',
+        name:['Discover'],
         image: [IMAGES.Discover5_1, ],
         price: ['$15.00'],
         optionItems: [],
@@ -152,7 +152,7 @@ export const LeatherRoll = {
             <p style={{paddingTop: '20px', color: 'rgb(149, 149, 149)'}}>This is a demo store. You can purchase products like this from <a href={'https://an-other.com/'}>A.N. OTHER.</a></p>
         </>,
     type: [{
-        name:'Leather Roll',
+        name:['Leather Roll'],
         image: [IMAGES.LeatherRoll, ],
         price: ['$200.00'],
         optionItems: [],
@@ -179,19 +179,19 @@ export const SmoothProduct = {
             <p style={{paddingTop: '20px', color: 'rgb(149, 149, 149)'}}>This is a demo store. You can purchase products like this from <a href={'https://an-other.com/'}>A.N. OTHER.</a></p>
         </>,
     type: [{
-        name:'Smooth 100ml',
+        name:['Smooth 100ml','Smooth 50ml','Smooth 7.5ml'],
         image: [IMAGES.Smooth100ml, IMAGES.Smooth50ml, IMAGES.Smooth7dot5ml],
         price: ['$95.00','$75.00','$25.00'],
         optionItems: ['100ml', '50ml', '7.5ml'],
     },
     {
-        name:'Smooth 50ml',
+        name:['Smooth 50ml','Smooth 100ml','Smooth 7.5ml'],
         image: [IMAGES.Smooth50ml, IMAGES.Smooth100ml, IMAGES.Smooth7dot5ml],
         price: ['$75.00','$95.00','$25.00'],
         optionItems: ['50ml', '100ml', '7.5ml',],
     },
     {
-        name:'Smooth 7.5ml',
+        name:['Smooth 7.5ml','Smooth 50ml','Smooth 100ml',],
         image: [IMAGES.Smooth7dot5ml, IMAGES.Smooth50ml, IMAGES.Smooth100ml],
         price: ['$25.00','$75.00','$95.00'],
         optionItems: ['7.5ml', '50ml', '100ml', ],
@@ -208,13 +208,13 @@ export const TravelCase = {
             <p style={{paddingTop: '20px', color: 'rgb(149, 149, 149)'}}>This is a demo store. You can purchase products like this from <a href={'https://an-other.com/'}>A.N. OTHER.</a></p>
         </>,
     type: [{
-        name:'Travel Case',
+        name:['Travel Case Black','Travel Case White',],
         image: [IMAGES.TravelcaseBlack, IMAGES.TravelcaseWhite, IMAGES.TravelcaseAll],
         price: ['$40.00','$40.00',],
         optionItems: ['Black', 'White',],
     },
     {
-        name:'Travel Case',
+        name:['Travel Case White','Travel Case Black',],
         image: [IMAGES.TravelcaseWhite, IMAGES.TravelcaseBlack, IMAGES.TravelcaseAll],
         price: ['$40.00','$40.00',],
         optionItems: ['White', 'Black',],
@@ -241,7 +241,7 @@ export const TravelSet = {
             <p style={{paddingTop: '20px', color: 'rgb(149, 149, 149)'}}>This is a demo store. You can purchase products like this from <a href={'https://an-other.com/'}>A.N. OTHER.</a></p>
         </>,
     type: [{
-        name:'Travel Set',
+        name:['Travel Set'],
         image: [IMAGES.TravelSet, ],
         price: ['$60.00'],
         optionItems: [],
@@ -269,19 +269,19 @@ export const WoodyProduct = {
             <p style={{paddingTop: '20px', color: 'rgb(149, 149, 149)'}}>This is a demo store. You can purchase products like this from <a href={'https://an-other.com/'}>A.N. OTHER.</a></p>
         </>,
     type: [{
-        name:'Woody 100ml',
+        name:['Woody 100ml', 'Woody 50ml', 'Woody 7.5ml',],
         image: [IMAGES.Woody100ml, IMAGES.Woody50ml, IMAGES.Woody7dot5ml],
         price: ['$80.00','$75.00','$15.00'],
         optionItems: ['100ml', '50ml', '7.5ml'],
     },
     {
-        name:'Woody 50ml',
+        name:['Woody 50ml', 'Woody 100ml', 'Woody 7.5ml',],
         image: [IMAGES.Woody50ml, IMAGES.Woody100ml, IMAGES.Woody7dot5ml],
         price: ['$75.00','$80.00','$15.00'],
         optionItems: ['50ml', '100ml', '7.5ml',],
     },
     {
-        name:'Woody 7.5ml',
+        name:[ 'Woody 7.5ml', 'Woody 50ml', 'Woody 100ml',],
         image: [IMAGES.Woody7dot5ml, IMAGES.Woody50ml, IMAGES.Woody100ml],
         price: ['$15.00','$75.00','$80.00'],
         optionItems: ['7.5ml', '50ml', '100ml', ],
@@ -307,20 +307,20 @@ export const FreshProduct = {
             <p style={{paddingTop: '20px', color: 'rgb(149, 149, 149)'}}>Read more about the Perfumer who created this scent here.</p>
             <p style={{paddingTop: '20px', color: 'rgb(149, 149, 149)'}}>This is a demo store. You can purchase products like this from <a href={'https://an-other.com/'}>A.N. OTHER.</a></p>
             </>,
-    type:[ {
-        name:'Fresh 100ml',
+    type:[{
+        name:['Fresh 100ml', 'Fresh 50ml', 'Fresh 7.5ml',],
         image: [IMAGES.Fresh100ml, IMAGES.Fresh50ml, IMAGES.Fresh7dot5ml,],
         price: ['$95.00', '$75.00', '$25.00'], 
         optionItems: ['100ml', '50ml', '7.5ml'],
     },
     {
-        name:'Fresh 50ml',
+        name:['Fresh 50ml', 'Fresh 100ml', 'Fresh 7.5ml',],
         image: [IMAGES.Fresh50ml,IMAGES.Fresh100ml,IMAGES.Fresh7dot5ml,],
         price: ['$75.00','$95.00','$25.00',],
         optionItems: ['50ml', '100ml', '7.5ml',],
     },
     {
-        name:'Fresh 7.5ml',
+        name:['Fresh 7.5ml', 'Fresh 50ml', 'Fresh 100ml',],
         image: [IMAGES.Fresh7dot5ml,IMAGES.Fresh50ml,IMAGES.Fresh100ml],
         price: ['$25.00','$75.00','$95.00',],
         optionItems: ['7.5ml', '50ml', '100ml', ],
@@ -346,19 +346,19 @@ export const FloralProduct = {
             <p style={{paddingTop: '20px', color: 'rgb(149, 149, 149)'}}>This is a demo store. You can purchase products like this from <a href={'https://an-other.com/'}>A.N. OTHER.</a></p>
             </>,
     type: [{
-        name:'Floral 100ml',
+        name:['Floral 100ml', 'Floral 50ml', 'Floral 7.5ml'],
         image: [IMAGES.Floral100ml,IMAGES.Floral50ml,IMAGES.Floral7dot5ml,],
         price: ['$95.00','$75.00','$25.00',],
         optionItems: ['100ml', '50ml', '7.5ml'],
     },
     {
-        name:'Floral 50ml',
+        name:[ 'Floral 50ml', 'Floral 100ml','Floral 7.5ml'],
         image: [IMAGES.Floral50ml,IMAGES.Floral100ml,IMAGES.Floral7dot5ml,],
         price: ['$75.00','$95.00','$25.00',],
         optionItems: ['50ml', '100ml', '7.5ml',],
     },
     {
-        name:'Floral 7.5ml',
+        name:['Floral 7.5ml', 'Floral 50ml', 'Floral 100ml',],
         image: [IMAGES.Floral7dot5ml,IMAGES.Floral50ml,IMAGES.Floral100ml,],
         price: ['$25.00','$75.00','$95.00',],
         optionItems: ['7.5ml', '50ml', '100ml', ],

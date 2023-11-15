@@ -18,6 +18,15 @@
     100% {bottom: -50px;}
 }
 
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
 .container {
     .containerImage{
         position: relative;     
@@ -51,6 +60,14 @@
                 margin-bottom: 5px;
                 cursor: pointer;
                 user-select: none;
+                .circle{
+                    border: solid 2px white;
+                    border-bottom: none;
+                    border-radius: 50%;
+                    width: 0.5cm;
+                    height: 0.5cm;
+                    animation: spin 0.4s linear infinite;
+                }
             }
             .addToCardBut:hover{
                 background-color: rgb(112, 112, 112);
