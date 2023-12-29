@@ -1,3 +1,5 @@
+$mobile: 600px;
+$tablet: 1024px; 
 
 .icon {
     height: 1.7rem;
@@ -12,13 +14,15 @@
 
 .title {
     font-family: 'Courier New', Courier, monospace;
-    font-size: small;
+    font-size: 1rem;
     font-weight: 600;   
 }
 
 
 
 .container_grid{
+    display: flex;
+    justify-content: center;
     &.dark{
         background-color: black;
         color: white;
@@ -38,7 +42,7 @@
     align-content: center;
     padding: 2rem 10rem;
     .info {
-        font-size: 15px;
+        font-size: 1rem;
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         .emailBlock{
             display: flex;
@@ -95,4 +99,53 @@
     width: 100vw;
     justify-content: center;
     margin-bottom: 1rem;
+}
+
+@media screen and (max-width: $tablet){
+    .container_grid{
+        .info{
+            .title,.emailBlock,.phoneNumberBlock,.add {
+                font-size: 0.7rem;
+                div,.email {
+                    font-size: 0.7rem;
+                }
+            }
+        }
+        .payment{
+            .title{
+                font-size: 0.7rem;
+            }
+            .paymentlist{
+                width: 10rem;
+                .icon{
+                    height: 1.3rem;
+                    width: 2.7rem;
+                    a{
+                        img{
+                            object-fit: contain;
+                            height: 1.3rem;
+                            width: 2.7rem;                        }
+                    }
+                }
+            }
+        }
+        .express{
+            .title{ 
+                font-size: 0.7rem;
+            }
+            .expresslist{
+                width: 10rem;
+                .icon{
+                    height: 1.3rem;
+                    width: 2.7rem;
+                    a{
+                        img{
+                            object-fit: contain;
+                            height: 1.3rem;
+                            width: 2.7rem;                        }
+                    }
+                }
+            }
+        }
+    }
 }

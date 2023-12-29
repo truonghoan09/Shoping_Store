@@ -17,3 +17,12 @@
         }
     }
 }
+
+@media screen and (max-width: 650px){
+    .container{
+        .containerProducts{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

@@ -1,3 +1,5 @@
+$mobile: 600px;
+$tablet: 1024px; 
 
 @keyframes slideIn {
     0% {
@@ -30,7 +32,7 @@
     height: 100vh;
     background-color: rgba(133, 133, 133, 0.463);
     position: fixed;
-    z-index: 10;
+    z-index: 11;
     .active{
         animation: slideIn 0.4s ease-in-out forwards;
     }
@@ -42,7 +44,7 @@
         right: 0;
         background-color: white;
         height: 100vh;
-        width: 10cm;
+        width: 40%;
         .subContent{
             background-color: rgb(243,243,243);
             height: 0.8cm;
@@ -119,7 +121,7 @@
                 display: flex;
                 border-top: 1px rgb(232,232,232) solid;
                 border-bottom: 1px rgb(232,232,232) solid;
-                
+                position: relative;
                 .containerImage{
                     padding-right: 0.4cm;
                     img {
@@ -148,7 +150,9 @@
                     }
                 }
                 .removeCartBtn{
-                    width: 2.5cm;
+                    position: absolute;
+                    right: 3rem;
+                    width: 2.5cm;   
                     height: 3cm;
                     display: flex;
                     justify-content: end;
@@ -246,5 +250,20 @@
             background-color: rgba(238, 238, 238, 0.849);
         }
     }
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .container{
+        .containerCart{
+            width: 60%;
+        }
+    }
+}
+@media screen and (max-width: $mobile) {
+    .container{
+        .containerCart{
+            width: 70%;
+        }
     }
 }

@@ -11,7 +11,7 @@ const CheckTokenServices = (data) => {
             reject(error)
         }
     })
-    console.log(decodeSuccess);
+    console.log('decodeSuccess: ',decodeSuccess);
     return (decodeSuccess);
 }
 

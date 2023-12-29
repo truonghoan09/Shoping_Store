@@ -304,3 +304,12 @@ $gradientColorCustom : linear-gradient(to right, #4172e4, #68afd8, #39d0e7, #49d
         }
     }
 }
+
+@media screen and (max-width: 1000px) {
+    .containerPage{
+        .container{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
